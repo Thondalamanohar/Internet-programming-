@@ -1,0 +1,160 @@
+Booking page
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Your Stay In Taj Mahal</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+background: url('hotel tej.jpg') no-repeat center center fixed;
+background-size: cover;
+margin: 0;
+padding: 0;
+color: #333;
+}
+.container {
+max-width: 600px;
+margin: 50px auto;
+background: rgba(255, 255, 255, 0.8);
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h2 {
+text-align: center;
+color: #333;
+}
+.form-group {
+margin-bottom: 15px;
+}
+.form-group label {
+display: block;
+margin-bottom: 5px;
+font-weight: bold;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+width: 100%;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+.cta-button,
+.availability-button,
+.next-button {
+display: block;
+width: 100%;
+padding: 10px;
+color: white;
+border: none;
+border-radius: 5px;
+font-size: 16px;
+cursor: pointer;
+margin-bottom: 15px;
+}
+.cta-button {
+background-color: #007BFF;
+}
+.cta-button:hover {
+background-color: #0056b3;
+}
+.availability-button {
+background-color: #28a745;
+}
+.availability-button:hover {
+background-color: #218838;
+}
+.next-button {
+background-color: #ffc107;
+}
+.next-button:hover {
+background-color: #e0a800;
+}
+footer {
+text-align: center;
+padding: 20px;
+background: rgba(255, 255, 255, 0.8);
+position: fixed;
+bottom: 0;
+width: 100%;
+}
+</style>
+</head>
+<body>
+<!-- Booking Form -->
+<section class="booking">
+<div class="container">
+<h2>Book Your Stay In Taj Mahal</h2>
+<form id="booking-form" action="conform.html" method="post" class="booking-
+form">
+<div class="form-group">
+<label for="checkin">Check-In Date:</label>
+<input type="date" id="checkin" name="checkin" required>
+</div>
+<div class="form-group">
+<label for="checkout">Check-Out Date:</label>
+<input type="date" id="checkout" name="checkout" required>
+</div>
+<div class="form-group">
+<label for="guests">Number of Guests:</label>
+<input type="number" id="guests" name="guests" min="1" max="10" required>
+</div>
+<div class="form-group">
+<label for="room">Room Type:</label>
+<select id="room" name="room" required>
+<option value="deluxe">Deluxe Room</option>
+<option value="superior">Superior Room</option>
+<option value="suite">Suite</option>
+</select>
+</div>
+<div class="form-group">
+<label for="name">Full Name:</label>
+<input type="text" id="name" name="name" required>
+</div>
+<div class="form-group">
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" required>
+</div>
+<div class="form-group">
+<label for="phone">Phone Number:</label>
+<input type="tel" id="phone" name="phone" required>
+</div>
+<div class="form-group">
+<label for="special">Special Requests:</label>
+<textarea id="special" name="special" rows="4"></textarea>
+</div>
+<button type="button" class="availability-button"
+onclick="checkAvailability()">Check Availability</button>
+<button type="button" class="next-button" id="next-button"
+onclick="document.location='pay.html' ">Next</button>
+</div>
+</section>
+<script>
+function checkAvailability() {
+const checkin = document.getElementById('checkin').value;
+const checkout = document.getElementById('checkout').value;
+const guests = document.getElementById('guests').value;
+const room = document.getElementById('room').value;
+const isAvailable = (new Date(checkin) < new Date(checkout)) && guests > 0 &&
+guests < 5;
+if (isAvailable) {
+alert('Room is available');
+document.getElementById('next-button').disabled = false;
+} else {
+alert('Room is not available for the selected dates');
+document.getElementById('next-button').disabled = true;
+}
+}
+function goToNextPage() {
+if (!document.getElementById('next-button').disabled) {
+document.getElementById('booking-form').submit();
+} else {
+alert('Please check availability before proceeding.');
+}
+}
+</script>
+</body>
+</html>
