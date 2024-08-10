@@ -1,0 +1,219 @@
+>
+Homepage
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Taj Mahal Hotel</title>
+<style>
+body {
+font-family: 'Georgia', serif;
+background: url(Taj\ hotel.jpg) no-repeat center center fixed;
+background-size: cover;
+margin: 0;
+padding: 0;
+color: #4A4A4A;
+}
+.container {
+max-width: 1200px;
+margin: 50px auto;
+background: rgba(255, 255, 255, 0.8);
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1, h2, h3, p {
+text-align: center;
+}
+h1 {
+font-size: 48px;
+margin-bottom: 20px;
+color: #333;
+}
+h2 {
+font-size: 36px;
+margin-bottom: 20px;
+color: #555;
+}
+h3 {
+font-size: 28px;
+margin-bottom: 10px;
+color: #777;
+}
+p {
+font-size: 18px;
+line-height: 1.6;
+}
+.cta-button, .book-button {
+display: inline-block;
+padding: 10px 20px;
+background-color: #8B0000;
+color: white;
+text-align: center;
+text-decoration: none;
+border-radius: 5px;
+font-size: 18px;
+margin-top: 20px;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+.cta-button:hover, .book-button:hover {
+background-color: #600000;
+}
+.room-grid, .service-grid, .testimonial-grid {
+display: flex;
+gap: 30px;
+justify-content: center;
+flex-wrap: wrap;
+margin-top: 30px;
+}
+.room, .service, .testimonial {
+background: white;
+padding: 25px;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+flex: 1 1 calc(33.333% - 60px);
+box-sizing: border-box;
+max-width: calc(33.333% - 60px);
+margin: 15px 0;
+}
+.room img {
+max-width: 100%;
+border-radius: 10px;
+margin-bottom: 15px;
+}
+@media (max-width: 768px) {
+.room, .service, .testimonial {
+flex: 1 1 calc(50% - 40px);
+max-width: calc(50% - 40px);
+}
+}
+@media (max-width: 480px) {
+.room, .service, .testimonial {
+flex: 1 1 calc(100% - 30px);
+max-width: calc(100% - 30px);
+}
+}
+footer {
+text-align: center;
+padding: 20px;
+background: rgba(255, 255, 255, 0.9);
+border-top: 1px solid #e5e5e5;
+position: relative;
+bottom: 0;
+width: 100%;
+margin-top: 30px;
+}
+.price {
+display: flex;
+justify-content: space-around;
+margin-top: 10px;
+}
+.price span {
+font-size: 16px;
+}
+.price .seasonal {
+color: #8B0000;
+}
+.price .non-seasonal {
+color: #006400;
+}
+</style>
+</head>
+<body>
+<!-- Hero Section -->
+<section class="hero">
+<div class="container">
+<h1>WELCOME TO TAJ MAHAL</h1>
+<p>Experience the best stay at the best price</p>
+</div>
+</section>
+<!-- Featured Rooms -->
+<section class="featured-rooms">
+<div class="container">
+<h2>TAJ ROOMS</h2>
+<div class="room-grid">
+<div class="room">
+<h3>Deluxe Rooms</h3>
+<img src="deluxe.jpg" width="600px" height=300px;>
+<div class="price">
+<span class="seasonal">Seasonal: ₹7000 per night</span>
+<span class="non-seasonal">Non-Seasonal: ₹5000 per night</span>
+</div>
+<button onclick="location.href='bookpage.html'" class="book-button">Book
+Now</button>
+</div>
+<div class="room">
+<h3>Superior Room</h3>
+<img src="super.jpg" width="600px" height=300px;>
+<div class="price">
+<span class="seasonal">Seasonal: ₹12000 per night</span>
+<span class="non-seasonal">Non-Seasonal: ₹10000 per night</span>
+</div>
+<button onclick="location.href='bookpage.html'" class="book-button">Book
+Now</button>
+</div>
+<div class="room">
+<h3>Suite</h3>
+<img src="suit.jpg"width="600px" height=300px;>
+<div class="price">
+<span class="seasonal">Seasonal: ₹18000 per night</span>
+<span class="non-seasonal">Non-Seasonal: ₹15000 per night</span>
+</div>
+<button onclick="location.href='bookpage.html'" class="book-button">Book
+Now</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Services -->
+<section class="services">
+<div class="container">
+<h2>Our Services</h2>
+<div class="service-grid">
+<div class="service">
+<h3>Spa & Wellness</h3>
+<p>Relax and rejuvenate with our top-notch spa services.</p>
+</div>
+<div class="service">
+<h3>Fine Dining</h3>
+<p>Enjoy exquisite meals prepared by our renowned chefs.</p>
+</div>
+<div class="service">
+<h3>Pool & Gym</h3>
+<p>Stay fit and have fun with our pool and gym facilities.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="testimonials">
+<div class="container">
+<h2>What Our Guests Say</h2>
+<div class="testimonial-grid">
+<div class="testimonial">
+<p>"Amazing experience! The rooms were clean and the service was
+excellent."</p>
+<h4>- John Doe</h4>
+</div>
+<div class="testimonial">
+<p>"The best hotel I've stayed at. Highly recommend it!"</p>
+<h4>- Jane Smith</h4>
+</div>
+<div class="testimonial">
+<p>"Wonderful stay with great amenities and friendly staff."</p>
+<h4>- Alice Johnson</h4>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer>
+<div class="container">
+<p>&copy; 2024 Hotel Booking. All rights reserved.</p>
+</div>
+</footer>
+<script src="scripts.js"></script>
+</body>
+</html>
